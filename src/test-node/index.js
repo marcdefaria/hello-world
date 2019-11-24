@@ -1,10 +1,25 @@
 var express = require('express');
 var app = express();
 var square = require('./square')
-
+var logger = require('morgan')
 var wiki = require('./wiki.js')
 
+// remember to always require and instantiate middleware before routing
+app.use(logger('dev'))
+
 app.use('/wiki', wiki);
+
+/*---------My own Middleware function------------------------------*/
+var a_middleware_function = function(req, res, next) {
+	console.log('Middleware function for all routes and verbs called');
+	next();
+}
+
+// Function added with use() for all routes and verbs
+app.use(a_middleware_function);
+
+/*-----------------------------------------------------------------*/
+
 
 app.get('/', function(req, res) {
   res.send('Hello World!');
