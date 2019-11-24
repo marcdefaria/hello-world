@@ -2,6 +2,10 @@ var express = require('express');
 var app = express();
 var square = require('./square')
 
+var wiki = require('./wiki.js')
+
+app.use('/wiki', wiki);
+
 app.get('/', function(req, res) {
   res.send('Hello World!');
   console.log('Received a get request and responded')
