@@ -9,6 +9,8 @@ app.use(logger('dev'))
 
 app.use('/wiki', wiki);
 
+app.use(express.static('public'))
+
 /*---------My own Middleware function------------------------------*/
 var a_middleware_function = function(req, res, next) {
 	console.log('Middleware function for all routes and verbs called');
