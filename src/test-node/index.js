@@ -4,6 +4,8 @@ var square = require('./square')
 var logger = require('morgan')
 var wiki = require('./wiki.js')
 
+const username = process.argv[2].split('=')[1]
+
 // remember to always require and instantiate middleware before routing
 app.use(logger('dev'))
 
