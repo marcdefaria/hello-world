@@ -4,4 +4,7 @@ This is my first edit to the repo
 
 Using website guide at url https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction
 
-Stopped developing at 'Serving static files' (ask Tim what this is) 
+In order to run this application, the following install commands need to be run:
+npm install
+npm install morgan
+npm install mongodb
