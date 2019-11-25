@@ -9,7 +9,14 @@ app.use(logger('dev'))
 
 app.use('/wiki', wiki);
 
+// serving static files
 app.use(express.static('public'))
+
+// Handling errors
+app.use( function(err, req, res, next) {
+	console.error(err.stack);
+	res.status(500).send('Something broke!');
+});
 
 /*---------My own Middleware function------------------------------*/
 var a_middleware_function = function(req, res, next) {
