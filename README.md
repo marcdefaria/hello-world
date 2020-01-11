@@ -6,5 +6,6 @@ Using website guide at url https://developer.mozilla.org/en-US/docs/Learn/Server
 
 In order to run this application, the following install commands need to be run:
 npm install
-npm install morgan
-npm install mongodb
+
+Deployed this node.js application into a docker image by following the instructions stipulated on https://nodejs.org/de/docs/guides/nodejs-docker-webapp/
+(In order to run this in a docker container, see instructions at heading "Building your image")
