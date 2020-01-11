@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
-var square = require('./square')
+var square = require('./src/test-node/square')
 var logger = require('morgan')
-var wiki = require('./wiki.js')
+var wiki = require('./src/test-node/wiki.js')
 
 // remember to always require and instantiate middleware before routing
 app.use(logger('dev'))
